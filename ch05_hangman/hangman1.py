@@ -23,15 +23,21 @@ word_list = [ 'apple', 'banana', 'camel']
 정답
 오답
 '''
-
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
 guess = input('알파벳 입력 >>> ').lower()
 print(guess)
 
+# str 데이터에서 반복문 돌리면 문자 하나짜리씩 나옵니다.
+for letter in chosen_word: # camel 이라면 c, a
+    if letter == guess:
+        print('1 : 정답')
+    else:
+        print('1 : 오답')
+
 for i in range(len(chosen_word)):
     if guess == chosen_word[i]:
-        print('정답')
+        print('2 : 정답')
     else:
-        print('오답')
+        print('2 : 오답')
