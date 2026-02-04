@@ -1,12 +1,12 @@
 class MoneyMachine:
 
-    CURRENCY = "$"
+    CURRENCY = "달러"
 
     COIN_VALUES = {
-        "quarters": 0.25,
-        "dimes": 0.10,
-        "nickles": 0.05,
-        "pennies": 0.01
+        "쿼터": 0.25,
+        "다임": 0.10,
+        "니켈": 0.05,
+        "페니": 0.01
     }
 
     def __init__(self):
@@ -29,7 +29,7 @@ class MoneyMachine:
         self.process_coins()
         if self.money_received >= cost:
             change = round(self.money_received - cost, 2)
-            print(f"여기 잔돈 {self.CURRENCY}{change}를 반환합니다.")
+            print(f"여기 잔돈 {change}{self.CURRENCY}를 반환합니다.")
             self.profit += cost
             self.money_received = 0
             return True
