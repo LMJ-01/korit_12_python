@@ -184,9 +184,13 @@ print(f'직사각형의 넓이: {rectangle.area()}')
 class Shape:
     def __init__(self, name):
         self.name = name
+        print(self.name)
 
     def draw(self):
         self.name
+
+    def area(self): # 로직은 없지만 해두게 되면 자식 클래스들이 동일한 메서드를 override 할 수 있겠네요.
+        pass
 
 class Circle(Shape):
     def __init__(self, name, radius):
@@ -195,8 +199,7 @@ class Circle(Shape):
         print(f'반지름이 {self.radius}인 {self.name}이 생성되었습니다.')
 
     def area(self):
-        area = self.radius * self.radius * 3.14
-        return area
+        return 3.14*(self.radius**2)
 
     def draw(self):
         print(f'이름이 {self.name}인 원의 넓이는 {self.area()} 입니다.')
@@ -209,10 +212,10 @@ class Rectangle(Shape):
         print(f'너비가 {self.width}, {self.height}인 {self.name}이 생성되었습니다.')
 
     def area(self):
-        area = self.width * self.height
-        return area
+        return self.width * self.height
 
     def draw(self):
+        # 메서드가 override 된거긴 한데 부모의 로직을 아예 안쓴거죠.
         print(f'이름이 {self.name}인 직사각형의 넓이는 {self.area()} 입니다.')
 
 circle = Circle('원1', 5)
