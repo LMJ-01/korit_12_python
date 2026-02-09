@@ -181,12 +181,12 @@ dict1 = {
 #     print(dict1[key])           # 매우 중요.
 #
 # # key들만 추출하는 메서드
-# print(dict1.keys())
-# print(type(dict1.keys()))       # 결과값 : <class 'dict_keys'>
-# print(list(dict1.keys()))       # 결과값 : ['이름', '나이', '주소']
-# # value들만 추출하는 메서드
-# print(dict1.values())
-# print(type(dict1.values()))     # 결과값 : <class 'dict_values'>
+print(dict1.keys())
+print(type(dict1.keys()))       # 결과값 : <class 'dict_keys'>
+print(list(dict1.keys()))       # 결과값 : ['이름', '나이', '주소']
+# value들만 추출하는 메서드
+print(dict1.values())
+print(type(dict1.values()))     # 결과값 : <class 'dict_values'>
 
 # key들 혹은 value들만 뽑아서 list를 만들고 싶다면 list() 형변환 함수를 사용하셔야 합니다.
 
